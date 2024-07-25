@@ -1,5 +1,7 @@
 import {Given, When, Then,} from "@cucumber/cucumber"
 import { pageFixture } from "../../hooks/pageFixture";
+import { expect } from "@playwright/test";
+import { assert } from "console";
 
 
 When('user search for a {string}', async function (product) {
@@ -10,16 +12,17 @@ When('user search for a {string}', async function (product) {
   });
  
 When('user add product to the cart', async function () {
-    await pageFixture.page.locator("#quantity_66a0c4851b88b").fill('');
-    await pageFixture.page.locator("#quantity_66a0c4851b88b").fill("1");
+    await pageFixture.page.locator("input[type=number]").clear();
+    await pageFixture.page.locator("input[type=number]").fill("1");
     await pageFixture.page.locator("div.summary.entry-summary > form > button").click();
-    /*await pageFixture.page.keyboard.press('Backspace');
-    await pageFixture.page.locator("div.summary.entry-summary > form > button").click();*/
+    
 
     
 });
 
 Then('the cart badge should get updated', async function () {
-    // Write code here that turns the phrase above into concrete actions
-    return 'pending';
+    await pageFixture.page.locator("li.top-cart").click();
+    const badgeCount = await pageFixture.page.locator("input[type=number]").textContent();
+    expect(Number(badgeCount)).toBeGreaterThan(0);
+    
 });
