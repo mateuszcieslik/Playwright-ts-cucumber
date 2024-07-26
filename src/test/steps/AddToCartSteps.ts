@@ -1,7 +1,8 @@
 import {Given, When, Then,} from "@cucumber/cucumber"
 import { pageFixture } from "../../hooks/pageFixture";
 import { expect } from "@playwright/test";
-import { assert } from "console";
+import { Console } from "console";
+
 
 
 When('user search for a {string}', async function (product) {
@@ -22,7 +23,7 @@ When('user add product to the cart', async function () {
 
 Then('the cart badge should get updated', async function () {
     await pageFixture.page.locator("li.top-cart").click();
-    const badgeCount = await pageFixture.page.locator("input[type=number]").textContent();
+    const badgeCount = await pageFixture.page.locator("input[type=number]").inputValue();
     expect(Number(badgeCount)).toBeGreaterThan(0);
     
 });
