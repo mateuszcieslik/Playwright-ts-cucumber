@@ -27,6 +27,3 @@ Then('the cart badge should get updated', async function () {
     expect(Number(badgeCount)).toBeGreaterThan(0);
     
 });
-
-//Test11
-//Test22
