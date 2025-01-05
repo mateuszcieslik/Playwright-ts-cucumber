@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name": "playwright-ts-cucumber",
   "version": "1.0.0",
   "description": "",
@@ -6,10 +7,18 @@
   "scripts": {
     "test": "cucumber-js test"
   },
+=======
+  "name": "playwright-tests-demobank",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+>>>>>>> 05aa305 (init repo)
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+<<<<<<< HEAD
     "@cucumber/cucumber": "^10.8.0",
     "@playwright/test": "^1.45.1",
     "@types/node": "^20.14.9",
@@ -18,5 +27,9 @@
   "dependencies": {
     "latest-version": "^9.0.0",
     "reflect-metadata": "^0.2.2"
+=======
+    "@playwright/test": "^1.48.2",
+    "@types/node": "^22.9.0"
+>>>>>>> 05aa305 (init repo)
   }
 }

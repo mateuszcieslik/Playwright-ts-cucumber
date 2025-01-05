@@ -1,6 +1,7 @@
 node_modules/
 /test-results/
 /playwright-report/
+<<<<<<< HEAD
 /playwright/.cache/
 /test-result/
 /test-results/
@@ -11,3 +12,7 @@ features
 @rerun.txt
 index.html
 .DS_Store
+=======
+/blob-report/
+/playwright/.cache/
+>>>>>>> 05aa305 (init repo)
