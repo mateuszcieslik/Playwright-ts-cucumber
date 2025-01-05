@@ -11,7 +11,7 @@ test.describe("Login page", () => {
   });
  
 
-  test.only("successful login with correct credentials", async ({ page }) => {
+  test("successful login with correct credentials", async ({ page }) => {
     //Arrange
     const userId = "test1234";
     const userPassword = "Yolo1234";
