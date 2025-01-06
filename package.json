@@ -12,8 +12,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+<<<<<<< HEAD
   "scripts": {},
 >>>>>>> 05aa305 (init repo)
+=======
+  "scripts": {
+    "lint": "next lint",
+    "bulid": "next build" 
+  },
+>>>>>>> 0f28845 (github actions)
   "keywords": [],
   "author": "",
   "license": "ISC",

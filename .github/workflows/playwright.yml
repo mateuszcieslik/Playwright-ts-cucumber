@@ -25,3 +25,8 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+    - name: Lint
+      run: npm run Lint
+    - name: Build
+      run: npm run Build
+
